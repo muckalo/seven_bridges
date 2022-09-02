@@ -40,6 +40,7 @@ $ curl -X POST -H "Content-Type: application/json" -H "X-Username: sbg_user1" "1
 #### View tweets - API call
 ```bash
 $ curl -X GET -H "Content-Type: application/json" -H "X-Username: [USERNAME]" "127.0.0.1:5000/v1/tweets?limit=[LIMIT]&offset=[OFFSET]&createdBy=[CREATED_BY]&hashTags=[ENCODED_HASHTAG]"
+$ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&createdBy=sbg_user1"
 $ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1"
 $ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&hashTags=%23life"
 $ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1&hashTags=%23life"
