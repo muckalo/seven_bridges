@@ -33,20 +33,20 @@ $ flask run
 
 #### insert new tweet - API call
 ```bash
-$ curl -X POST -H 'Content-Type: application/json' -H 'X-Username: [USERNAME]' '127.0.0.1:5000/v1/tweets?hashTags=[ENCODED_HASHTAG]&hashTags=[ENCODED_HASHTAG]' -d '{"tweetBody": [TWEET_TEXT]}'
-$ curl -X POST -H 'Content-Type: application/json' -H 'X-Username: sbg_user1' '127.0.0.1:5000/v1/tweets?hashTags=%23hashtag1&hashTags=%23hashtag2' -d '{"tweetBody": "This is some new tweet text weio2938ur2foj."}'
+$ curl -X POST -H "Content-Type: application/json" -H "X-Username: [USERNAME]" "127.0.0.1:5000/v1/tweets?hashTags=[ENCODED_HASHTAG]&hashTags=[ENCODED_HASHTAG]" -d "{\"tweetBody\": \"[TWEET_TEXT]\"}"
+$ curl -X POST -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?hashTags=%23hashtag1&hashTags=%23hashtag2" -d "{\"tweetBody\": \"This is some new tweet text weio2938ur2foj.\"}"
 ```
 
 #### View tweets - API call
 ```bash
-$ curl -X GET -H 'Content-Type: application/json' -H 'X-Username: [USERNAME]' '127.0.0.1:5000/v1/tweets?limit=[LIMIT]&offset=[OFFSET]&createdBy=[CREATED_BY]&hashTags=[ENCODED_HASHTAG]'
-$ curl -X GET -H 'Content-Type: application/json' -H 'X-Username: sbg_user1' '127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1'
-$ curl -X GET -H 'Content-Type: application/json' -H 'X-Username: sbg_user1' '127.0.0.1:5000/v1/tweets?limit=2&offset=2&hashTags=%23life'
-$ curl -X GET -H 'Content-Type: application/json' -H 'X-Username: sbg_user1' '127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1&hashTags=%23life'
+$ curl -X GET -H "Content-Type: application/json" -H "X-Username: [USERNAME]" "127.0.0.1:5000/v1/tweets?limit=[LIMIT]&offset=[OFFSET]&createdBy=[CREATED_BY]&hashTags=[ENCODED_HASHTAG]"
+$ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1"
+$ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&hashTags=%23life"
+$ curl -X GET -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets?limit=2&offset=2&createdBy=sbg_user1&hashTags=%23life"
 ```
 
 #### Delete tweet - API call
 ```bash
-$ curl -X POST -H 'Content-Type: application/json' -H 'X-Username: [USERNAME]' '127.0.0.1:5000/v1/tweets/[TWEET_ID]'
-$ curl -X POST -H 'Content-Type: application/json' -H 'X-Username: sbg_user1' '127.0.0.1:5000/v1/tweets/eTW2RaylKUB7AH4aldpP'
+$ curl -X POST -H "Content-Type: application/json" -H "X-Username: [USERNAME]" "127.0.0.1:5000/v1/tweets/[TWEET_ID]"
+$ curl -X POST -H "Content-Type: application/json" -H "X-Username: sbg_user1" "127.0.0.1:5000/v1/tweets/eTW2RaylKUB7AH4aldpP"
 ```
